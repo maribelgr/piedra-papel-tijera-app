@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="container">
+  <img src="../../../assets/icons/piedra-papel-tijeras.png" alt="Logo del juego" class="logo">
+  <div>
+    <label for="playerName">Nombre del Jugador:</label>
+    <input type="text" id="playerName" name="playerName" [(ngModel)]="playerName" />
+  </div>
+  <button (click)="startGame()">Iniciar Juego</button>
+</div>

@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centrar verticalmente en toda la altura de la ventana */
+}
+
+.container {
+  width: 80%; /* Ocupar el 80% del ancho */
+  max-width: 400px; /* Establecer un ancho máximo para una mejor visualización en dispositivos grandes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 20%;
+
+}
+
+.logo {
+  width: 40%; /* Ajusta el ancho según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 20px; /* Espaciado entre el logo y otros elementos */
+}
+
+/* Estilo para el campo de texto y el botón */
+label, input, button {
+  display: block; /* Mostrar en bloques, uno debajo del otro */
+  margin-bottom: 15px; /* Espaciado entre elementos */
+}
+
+/* Estilo para el botón */
+button {
+  padding: 10px; /* Ajustar el relleno del botón */
+}
