@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class GameComponent implements OnInit {
   playerName: string = '';
   playerScore: number = 0;
+  playerSelection: any = '';
   machineSelection: string = '';
   result: string = '';
 
@@ -25,37 +26,30 @@ export class GameComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Obtener el nombre del jugador del almacenamiento local
     this.playerName = this.storageService.getPlayerName();
 
-    // Subscribirse a cambios en la puntuación del jugador
     this.playerNameSubscription = this.gameService.getPlayerScore().subscribe(score => {
       this.playerScore = score;
     });
   }
 
   ngOnDestroy(): void {
-    // Desuscribirse al destruir el componente
     this.playerNameSubscription.unsubscribe();
   }
 
   makeSelection(selection: string): void {
-    // Hacer la selección del jugador y de la "máquina"
     const machineSelection = this.gameService.makeMachineSelection();
     const result = this.gameService.determineWinner(selection, machineSelection);
 
-    // Actualizar la puntuación del jugador
     if (result === 'win') {
       this.gameService.incrementPlayerScore();
     }
 
-    // Mostrar los resultados
     this.machineSelection = machineSelection;
     this.result = result;
   }
 
   exitGame(): void {
-    // Volver a la vista 'Home'
     this.router.navigate(['/']);
   }
 }

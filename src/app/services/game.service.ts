@@ -16,32 +16,30 @@ export class GameService {
     return this.playerScoreSubject.asObservable();
   }
 
-  // Incrementar la puntuación del jugador
   incrementPlayerScore() {
     const currentScore = this.playerScoreSubject.value;
     this.playerScoreSubject.next(currentScore + 1);
   }
 
-  // Hacer una selección aleatoria para la "máquina"
+  // Selección aleatoria para el bot
   makeMachineSelection(): string {
     const options = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
   }
 
-  // Determinar al ganador entre el jugador y la "máquina"
+  // Determinar al ganador
   determineWinner(playerSelection: string, machineSelection: string): string {
     if (playerSelection === machineSelection) {
-      return 'draw';
+      return "It's a tie ¬¬";
     } else if (
       (playerSelection === 'rock' && machineSelection === 'scissors') ||
       (playerSelection === 'scissors' && machineSelection === 'paper') ||
       (playerSelection === 'paper' && machineSelection === 'rock')
     ) {
-      return 'win';
+      return 'You win! :)';
     } else {
-      return 'lose';
+      return 'You lose :(';
     }
   }
 }
-

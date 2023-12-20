@@ -17,10 +17,8 @@ export class HomeComponent implements OnInit {
 
   startGame(): void {
     if (this.playerName.trim() !== '') {
-      // Guardar el nombre del jugador en el almacenamiento local
       this.storageService.setPlayerName(this.playerName);
 
-      // Redirigir a la vista 'Game'
       this.router.navigate(['/game']);
     }
   }

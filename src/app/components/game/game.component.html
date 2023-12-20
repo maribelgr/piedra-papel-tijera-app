@@ -1,14 +1,32 @@
-<div>
-  <p>¡Hola, {{ playerName }}!</p>
-  <p>Puntuación: {{ playerScore }}</p>
+<div class="header">
+  <div class="player-info">
+    <p>Hi, {{ playerName }}!</p>
+  </div>
+  <button class="exit-button" (click)="exitGame()">
+    <i class="fas fa-sign-out-alt"></i>
+  </button>
+</div>
 
-  <button (click)="makeSelection('rock')">Piedra</button>
-  <button (click)="makeSelection('paper')">Papel</button>
-  <button (click)="makeSelection('scissors')">Tijeras</button>
+<div class="container">
 
-  <p>La máquina seleccionó: {{ machineSelection }}</p>
-  <p>Resultado: {{ result }}</p>
+  <div class="main-content">
+    <div class="selection-buttons">
+      <button (click)="makeSelection('rock')">
+        <i class="fas fa-hand-rock"></i>
+      </button>
+      <button (click)="makeSelection('paper')">
+        <i class="fas fa-hand-paper"></i>
+      </button>
+      <button (click)="makeSelection('scissors')">
+        <i class="fas fa-hand-scissors"></i>
+      </button>
+    </div>
+  </div>
 
-  <button (click)="exitGame()">Salir</button>
+  <div class="result">
+    <p>Bot: {{ machineSelection }}</p>
+    <p>{{ result }}</p>
+  </div>
+
 </div>
 

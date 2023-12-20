@@ -1,34 +1,78 @@
 :host {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh; /* Centrar verticalmente en toda la altura de la ventana */
+  height: 100vh;
+  background-image: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  color: #fff;
+  font-size: 18px;
 }
 
 .container {
-  width: 80%; /* Ocupar el 80% del ancho */
-  max-width: 400px; /* Establecer un ancho máximo para una mejor visualización en dispositivos grandes */
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: flex-start;
-  margin-top: 20%;
+  gap: 20px;
+}
+
+.header {
+  width: 88%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin: 10px 0 10px;
+
+
+  p {
+    margin: 0;
+    margin-block: 0;
+  }
 
 }
 
 .logo {
-  width: 40%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin-bottom: 20px; /* Espaciado entre el logo y otros elementos */
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-/* Estilo para el campo de texto y el botón */
 label, input, button {
-  display: block; /* Mostrar en bloques, uno debajo del otro */
-  margin-bottom: 15px; /* Espaciado entre elementos */
+  display: block;
+  margin-bottom: 25px;
+  font-weight: 500;
 }
 
-/* Estilo para el botón */
+label {
+  font-size: 20px;
+  word-spacing: 2px;
+}
+
+
+input {
+  height: 30px;
+  padding-left: 10px;
+}
+
 button {
-  padding: 10px; /* Ajustar el relleno del botón */
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
 }

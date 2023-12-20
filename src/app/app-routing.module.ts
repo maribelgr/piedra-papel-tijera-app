@@ -6,7 +6,7 @@ import { GameComponent } from './components/game/game.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'game', component: GameComponent },
-  { path: '**', redirectTo: '' } //Redirige rutas no encontradas a la Home
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

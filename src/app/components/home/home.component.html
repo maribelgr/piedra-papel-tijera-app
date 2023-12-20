@@ -1,8 +1,12 @@
+<div class="header">
+  <p>Welcome!</p>
+</div>
+
 <div class="container">
   <img src="../../../assets/icons/piedra-papel-tijeras.png" alt="Logo del juego" class="logo">
-  <div>
-    <label for="playerName">Nombre del Jugador:</label>
-    <input type="text" id="playerName" name="playerName" [(ngModel)]="playerName" />
+  <div class="player-data">
+    <label for="playerName">Create new player</label>
+    <input type="text" id="playerName" name="playerName" [(ngModel)]="playerName" required placeholder="Name*"/>
   </div>
-  <button (click)="startGame()">Iniciar Juego</button>
+  <button (click)="startGame()">Join</button>
 </div>
