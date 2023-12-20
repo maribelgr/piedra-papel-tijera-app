@@ -1,27 +1,50 @@
-# PiedraPapelTijeraApp
+# Piedra, papel o tijera App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+App web creada con Angular 15 que se basa en el juego Piedra, papel o tijera.
 
-## Development server
+## Requisitos Previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Asegúrate de tener instalado lo siguiente antes de ejecutar la aplicación:
 
-## Code scaffolding
+- Node.js (versión 20.9.0)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configuración
 
-## Build
+1. Clona este repositorio en tu máquina local:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```bash
+    git clone https://github.com/tuusuario/turepositorio.git
+    ```
 
-## Running unit tests
+2. Navega al directorio de la aplicación:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    cd turepositorio
+    ```
 
-## Running end-to-end tests
+3. Instala las dependencias:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    npm install
+    ```
 
-## Further help
+4. Configura cualquier archivo de configuración si es necesario (por ejemplo, `.env`).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso
+
+Ejecuta la aplicación localmente con el siguiente comando:
+
+```bash
+npm start
+```
+
+La aplicación estará disponible en http://localhost:4200.
+
+## Contribución
+Si quieres contribuir a este proyecto, sigue estos pasos:
+
+Haz un fork del repositorio
+- Crea una rama para tu función/bugfix: git checkout -b nombre-de-la-rama
+- Haz tus cambios y haz commit: git commit -m 'Descripción de los cambios'
+- Haz un push a la rama: git push origin nombre-de-la-rama
+- Crea un Pull Request en GitHub
